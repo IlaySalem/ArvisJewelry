@@ -1,0 +1,18 @@
+.Dad{
+	background-color: #0C0C0C;
+	position: relative;
+    height: 5em;
+    border: 1px solid rgba(126, 196, 205, 0.68);
+}
+.Son{
+	position: absolute;
+	top: 50%;
+	border: 1px solid rgba(90, 240, 105, 0.68);
+	margin: auto;
+}
+h1 {
+	font-size: 40px;
+}
+h2 {
+	font-size: 25px;
+}

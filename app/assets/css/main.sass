@@ -1,0 +1,555 @@
+// This is the single file output by sass. It is intended to ONLY @import other files.
+$rightmove: -160px
+$vertmove: 27px
+
+// BASE
+@import 'base/fonts'
+@import 'base/normalize'
+@import 'base/vars'
+@import 'base/selection-colors'
+@import 'base/body-element'
+
+
+// LAYOUTS
+@import 'layouts/grid'
+
+
+// MODULES
+@import 'modules/validation'
+@import 'modules/device-notification'
+@import 'modules/section'
+@import 'modules/header'
+@import 'modules/side-nav'
+@import 'modules/intro'
+@import 'modules/work'
+@import 'modules/about'
+@import 'modules/contact'
+@import 'modules/hire'
+@import 'modules/outer-nav'
+// .logon
+// 	position: relative
+// 	height: 0
+// 	width: 50%
+// 	float: left
+// 	right: 30px
+// 	top: 90px
+.grid
+	display: grid 
+.grid2
+	display: grid
+.contuiner
+	grid-gap: 50px
+	grid-template-columns: repeat(2, 1fr)
+	position: absolute
+	top: 34%
+	-webkit-transform: translateY(20%)
+#Recive2
+	grid-column: 1 
+#slider
+	grid-column: 2
+	top: -80px
+.item 
+	opacity: 0
+	text-align: center
+	align-content: center
+	background-position: center center
+	background-repeat: no-repeat
+	background-color: #b3c6cd
+	-webkit-background-size: cover
+	-moz-background-size: cover
+	-o-background-size: cover
+	background-size: cover
+	min-height: 30vh
+#bannerH2
+	display: none
+	font-size: 30px
+	color: white
+	position: absolute
+	margin: 0 auto
+	bottom: 100px
+	right: 20px
+.device-notification 
+	flex-wrap: nowrap
+	opacity: 0.93
+.loader 
+	background: none repeat scroll 0 0 #161519
+	bottom: 0
+	height: 100%
+	left: 0
+	position: fixed
+	right: 0
+	top: 0
+	width: 100%
+	z-index: 9999
+.loader .loader_inner 
+	background-image: url("../img/preloader.gif")
+	background-size: cover
+	background-repeat: no-repeat
+	background-posirion: center center
+	background-color: #161519
+	height: 200px
+	width: 200px
+	margin-top: -100px
+	margin-left: -100px
+	left: 50%
+	top: 50%
+	position: absolute
+.header--logo
+	top: 20px
+
+
+.intro--options a, 
+	color: rgba( 200, 200, 200, .5)
+	text-decoration: none !important
+	margin: 10px
+	&:hover
+		text-decoration: none !important
+		transition: 0.5s ease
+		color: rgba( 107, 126, 228, 1)
+.logosvg
+	position: absolute
+	bottom: 100px
+	left: -12px
+	width: 50%
+	// /background-color: rgba(1, 177, 1, .5)
+	overflow: hidden
+.shadow 
+	-webkit-filter: drop-shadow( 5px 5px 5px #000 )
+	filter: drop-shadow( 5px 5px 5px #000 )
+// .intro
+// 	top: 90px
+.layer
+	float: right
+	overflow: hidden
+	//margin: 0 auto
+.imgcont
+	top: 200px
+@media (max-width: 600px)
+	// .layer
+	// 	position: absolute
+	// 	opacity: 1
+	// 	// top: 
+	#img1
+		display: none
+	.intro
+		top: 0px
+	.logosvg
+		display: none
+	.intro--options
+		display: block
+	.modal
+		position: absolute
+		top: 50px
+	.map
+		position: relative
+		bottom: -218px
+	.about--options
+		display: flex
+		h3
+			// bottom: -50px
+			font-size: 10px
+	.about--banner h2
+		font-size: 20px
+		
+	
+@media (max-width: 770px)
+	.outer-nav
+		margin: -76px
+.map
+	opacity: 0.8
+	margin: 30px
+	padding: 10px
+	text-align: center
+	background-color: $black
+	background-color: #000
+	width: 100%
+	height: 80%
+.modal--information
+	p
+		font-weight: 100
+.header--logo
+	position: absolute
+	p
+		font-size: 12px
+.validation
+	z-index: 10
+.ReciveBackBlack
+	display: none
+	opacity: 0
+// .Recive-active
+// 	display: block
+
+.y5
+	padding: 5px
+@media (min-width: 770px)
+	.ReciveBackBlack
+		margin-top: -25%
+
+.work--list
+	h1
+		background-color: rgba(15, 51, 255, 1)
+		color: white
+		position: absolute
+		font-size: 20px
+		top: 0px
+		padding: 10px
+		width: 200px
+		margin: -10px 5px
+		left: 0px
+	position: absolute
+	// background-color: rgba(15, 51, 255, .5)
+	border-radius: 10px
+	color: #000
+	min-width: 150px
+	height: 500px
+	right: $rightmove
+	top: 50%
+	transform: translateY(-50%)
+
+.list--item
+	position: absolute
+	list-style-type: none
+	left: 0px
+	margin: 5px
+	padding: 2px
+	color: #FFF
+	width: 200px
+	background-color: rgba(15, 51, 255, .3)
+	border-radius: 2px
+	font-weight: 100
+	z-index: 1
+	opacity: 1
+	transition: 0.5s
+	&:nth-child(1)
+		top: 5px
+	&:nth-child(2)
+		top: $vertmove
+	&:nth-child(3)
+		top: $vertmove*2	
+	&:nth-child(4)
+		top: $vertmove*3	
+	&:nth-child(5)
+		top: $vertmove*4		
+	&:nth-child(6)
+		top: $vertmove*5
+	&:nth-child(7)
+		top: $vertmove*6
+	&:nth-child(8)
+		top: $vertmove*7
+	&:nth-child(9)
+		top: $vertmove*8
+	&:nth-child(10)
+		top: $vertmove*9
+	&:nth-child(11)
+		top: $vertmove*10
+	&:nth-child(12)
+		top: $vertmove*11
+	&:nth-child(13)
+		top: $vertmove*12
+	&:nth-child(14)
+		top: $vertmove*13
+	&:nth-child(15)
+		top: $vertmove*14	
+	&:nth-child(16)
+		top: $vertmove*15
+	&:nth-child(17)
+		top: $vertmove*16
+	&:nth-child(18)
+		top: $vertmove*17
+	&:hover	
+		-webkit-filter: drop-shadow( 2px 0px 3px #FFF )
+		filter: drop-shadow( 2px 0px 3px #FFF )
+		
+.header--nav-toggle
+	position: absolute 
+	right: 0px
+.options-btn
+	margin-top: 0px
+.slider--item-title
+	font-weight: 600 !important
+.slider--item-description
+	font-weight: 100
+/*==========  Desktop First  ==========*/
+
+
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+	.work--list
+		right: $rightmove+50px
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 600px)
+	.intro--banner
+		display: none
+	.work--list
+		position: absolute
+		
+		margin-top: 70px
+		h2
+			position: fixed
+	.list--item
+		display: none
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+	.work--list
+		right: $rightmove+250px
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+	.work--list
+		right: $rightmove+500px
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+	.work--list
+		h1
+			background-color: rgba(15, 51, 255, 1)
+			color: white
+			position: absolute
+			font-size: 20px
+			top: 0px
+			padding: 10px
+			
+			margin: -10px 5px
+			left: 0px
+			
+		background-color: rgba(0,0,0, 0)
+		top: 52.5%
+		transform: translateY(-52.5%)
+		right: $rightmove+140px
+		height: 500px+200px
+		
+	.list--item
+		&:nth-child(10)
+			top: $vertmove*9+210
+		&:nth-child(11)
+			top: $vertmove*10+210
+		&:nth-child(12)
+			top: $vertmove*11+210
+		&:nth-child(13)
+			top: $vertmove*12+210
+		&:nth-child(14)
+			top: $vertmove*13+210
+		&:nth-child(15)
+			top: $vertmove*14+210
+		&:nth-child(16)
+			top: $vertmove*15+210
+		&:nth-child(17)
+			top: $vertmove*16+210
+		&:nth-child(18)
+			top: $vertmove*17+210
+	.map
+		height: 300px
+		bottom: -210px
+@media only screen and (max-height : 790px)
+	.work--list
+		h1
+			top: 150px
+	.list--item
+		display: none
+
+@media only screen and (max-height : 497px)
+	.device-notification 
+		display: -webkit-box
+		display: -webkit-flex
+		display: -ms-flexbox
+		display: flex
+@media only screen and (max-height : 620px)
+	.header--cta
+		display: none
+	.slider--item-description
+		opacity: 0
+
+@media only screen and (max-height : 680px)
+	.intro--banner
+		height: 300px
+	.imgcont
+		display: none
+@media only screen and (min-width : 680px)
+	.about--options
+		margin-top: -180px
+
+@media only screen and (max-width : 900px)
+	.imgcont
+		display: none
+@media only screen and (max-width : 600px)
+	.modal
+		padding: 10px 10px !important
+		position: relative
+		margin: 0 auto
+	.map
+		position: relative 
+		margin: 0px
+		top: 0px
+		left: 0px
+		min-width: 200px
+//extra media
+@media (max-height: 650px)
+	.about--banner
+		display: none
+	#bannerH2
+		display: block
+@media (max-height: 650px) 
+	.about--banner 
+		h2
+			margin-top: 50px
+			font-size: 35px
+	#Recive
+		button
+			float: none
+		min-height: 452px !important
+		margin-top: 0px !important
+@media (max-height: 582px) 
+	.header--logo
+		display: none
+	#Recive
+		margin-top: 10px !important
+		margin-bottom: 10px !important
+		button
+			float: none
+@media (max-height: 770px) 
+	.about--banner 
+		h2
+			margin-top: 50px
+			font-size: 35px
+	#Recive
+		margin-top: 0px 
+		margin-bottom: 39px
+.list--item--nonactive
+	position: absolute
+	top: 0px
+	right: 0px
+	list-style-type: none
+	left: 0px
+	margin: 5px
+	padding: 2px
+	color: #FFF
+	width: 200px
+	background-color: rgba(15, 51, 255, .3)
+	border-radius: 2px
+	font-weight: 100
+	opacity: 0
+	transition: 0.5s
+	z-index: -1
+
+//______________________________Stone Slider________________________________	
+.arrowsNav
+	grid-row: 12
+	grid-gap: 10px
+	position: relative
+	top: -64px
+	height: 70%
+	width: 80% 
+	// top: 50%
+	left: 50% 
+	margin-right: -50% 
+	transform: translate(-50%, -50%)
+	font-size: 50px
+	grid-template-columns: repeat(3, 1fr) 
+	.leftArrow
+		position: absolute
+		grid-column: 1
+		left: 0px
+		width: 1fr
+		height: 10px
+	.rightArrow
+		position: absolute
+		right: 0px
+		grid-column: 3
+		width: 1fr
+		height: 10px
+.boxfather
+
+	margin: 0px auto
+	padding: 0px
+	max-width: 650px
+	position: relative 
+	height: inherit
+	width: inherit 
+	color: #000
+	overflow: hidden
+	grid-row: 1 / 12
+	h1
+		font-size: 3vw
+		margin: 10px auto
+	.box
+		padding: 0
+		text-decoration: none 
+		text-align: center
+		list-style-type: none 
+		grid-gap: 10px 
+		position: absolute 
+		height: 70%
+		width: 80% 
+		top: 50%
+		left: 50% 
+		margin-right: -50% 
+		transform: translate(-50%, -50%)
+		grid-template-columns: repeat(3, 1fr)
+		//border: 10px solid green
+		.stone
+			min-height: 50px 
+			min-width: 50px 
+			//max-width: 250px
+			background-color: #15423b
+			margin: 0px 
+			//border: 2px solid #000
+			// &:nth-child(5)
+			// 	background-color: blue !important
+			&:hover
+				transition: all 1s ease
+				transform: scale(1.05)
+				//animation: infinite alternate
+				&::before
+
+					//content: 'Eric Cartman - R.I.P. 1996 - 2009 '
+					padding: 12.5%
+					font-size: 10px 
+					color: #000
+					position: absolute
+					top: 0
+					left: 0
+					right: 0
+					bottom: 0
+					background-color: rgba(255, 255, 255, 0.52)
+					
+				
+
+	.slide1
+		opacity: 1
+		//background-color: grey
+		li:nth-child(n)
+			background-color: #FFF
+		li:nth-child(1)
+			background-color: red
+		li:nth-child(5)
+			background-color: blue
+		li:nth-child(8)
+			background-image: url("../img/stone/1.jpg")
+			background-size: cover
+			background-repeat: no-repeat
+			background-posirion: center center
+
+	.slide2
+		opacity: 0
+		//background-color: green
+		li:nth-child(n)
+			background-color: #f6f725
+		li:nth-child(6)
+			background-color: blue
+		li:nth-child(4)
+			background-color: red
+		li:nth-child(8)
+			background-image: url("../img/stone/2.jpg")
+			background-size: cover
+			background-repeat: no-repeat
+			background-posirion: center center
+			&:hover
+				&::before
+					content: 'Eric Cartman - R.I.P. 1996 - 2009 '
+					
+
